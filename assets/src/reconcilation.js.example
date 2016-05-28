@@ -1,0 +1,9 @@
+renderA: <div />
+renderB: <span />
+
+Remove Node <div>, Insert Node <span> - full rerender
+
+renderA: <div style="{{color:red}}"/>
+renderB: <div style="{{fontWeight:bold}}"/>
+
+Remove style color, Add style font-weight - difference

@@ -1,0 +1,11 @@
+function checkWeapon(hero) {
+  console.log(hero.weapon)
+}
+
+// ...
+
+var thor = {weapon: 'hammer'}
+var cap = {weapon: 'shield', citizenship: "America"}
+
+checkWeapon(thor)
+checkWeapon(cap)

@@ -1,0 +1,13 @@
+var someZone = zone.fork({
+  afterTask: function () {
+    console.log('goodbye');
+  }
+});
+
+someZone.fork({
+  afterTask: function () {
+    console.log('cya l8r');
+  }
+}).run(function () {
+  // do stuff
+});

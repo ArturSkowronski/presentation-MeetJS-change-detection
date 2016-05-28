@@ -1,0 +1,10 @@
+<button id="button">Click Me</button>
+<div id="first-one"></div>
+<div id="second-one"></div>
+<div id="third-one"></div>
+
+$( "#button" ).click(function() {
+  $("#first-one").css('background-color','green');
+  $("#second-one").css('background-color','green');
+  $("#third-one").css('background-color','green');
+});

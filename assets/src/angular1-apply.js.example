@@ -1,0 +1,18 @@
+<div>{{message}}</div>
+
+$scope.message = {}
+
+$watchList = []
+
+scope.$watch('name', function(newValue, oldValue) {
+  scope.counter = scope.counter + 1;
+});
+
+angular.element(element).on(EVENT, function(){
+  $apply();
+}, 500));
+
+setTimeout(function () {
+    $scope.message = "delayed message";
+    $scope.$apply();
+}, 2000);

@@ -1,0 +1,11 @@
+import mx from 'react-addons-pure-render-mixin';
+class FooComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.shouldComponentUpdate = mx.shouldComponentUpdate.bind(this);
+  }
+
+  render() {
+    return <div className={this.props.className}>foo</div>;
+  }
+}

@@ -1,0 +1,4 @@
+@Component({changeDetection:ChangeDetectionStrategy.OnPush})
+class ImmutableTodoCmp {
+  todo:Todo;
+}

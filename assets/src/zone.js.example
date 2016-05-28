@@ -1,0 +1,30 @@
+zone.fork({
+  beforeTask: function () {
+    (...)
+  },
+  afterTask: function () {
+    (...)
+  }
+}).run(function () {
+    (...)
+    setTimeout(function(){}, 10);
+});
+
+zone.setTimeout = function(cb, time){
+  let window = localWindowGlobal;
+
+  nativeSetTimeout(function(){
+    angularStuff();
+    cb();
+  }, time);
+
+}
+
+Zone.setInterval()
+Zone.setTimeout()
+Zone.alert()
+Zone.prompt()
+Zone.requestAnimationFrame()
+Zone.addEventListener()
+Zone.removeEventListener()
+XMLHttpRequest

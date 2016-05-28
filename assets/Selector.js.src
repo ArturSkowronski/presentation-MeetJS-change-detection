@@ -1,0 +1,8 @@
+type ObservableTodo = Observable<todo>;
+type ObservableTodos = Observable<array>>;
+
+@Component({selector:'todos'})
+class ObservableTodosCmp {
+  todos:ObservableTodos;
+  //...
+}

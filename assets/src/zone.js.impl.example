@@ -1,0 +1,23 @@
+export function patchMethod(target: any, name: string,
+                            patchFn: (delegate: Function,
+                                      delegateName: string,
+                                      name: string) => (self: any, args: any[]) => any): Function
+{
+  let proto = target;
+  while (proto && !proto.hasOwnProperty(name)) {
+    proto = Object.getPrototypeOf(proto);
+  }
+  if (!proto && target[name]) {
+    // somehow we did not find it, but we can see it. This happens on IE for Window properties.
+    proto = target;
+  }
+  const delegateName = zoneSymbol(name);
+  let delegate: Function;
+  if (proto && ! (delegate = proto[delegateName])) {
+    delegate = proto[delegateName] = proto[name];
+    proto[name] = createNamedFn(name, patchFn(delegate, delegateName, name));
+  }
+  return delegate;
+}
+
+https://github.com/angular/zone.js/blob/master/lib/common/utils.ts

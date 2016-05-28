@@ -1,0 +1,12 @@
+<hero [weapon]="thor.hammer"></hero>
+
+Class Thor_ChangeDetector {
+  detectChanges() {
+    var thor = obj.thor;
+    var hammer = thor.hammer
+    if(hammer != this.previousHammer){
+      this.previousHammer = hammer;
+      this.heroComponent.hammer = hammer;
+    }
+  }
+}

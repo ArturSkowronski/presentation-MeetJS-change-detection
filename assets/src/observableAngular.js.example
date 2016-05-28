@@ -1,0 +1,5 @@
+@Component({selector:'weapon'})
+class ObservableWeaponCmp {
+  weapon:ObservableWeapon;
+  (...)
+}

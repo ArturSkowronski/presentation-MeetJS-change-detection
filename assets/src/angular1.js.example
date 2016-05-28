@@ -1,0 +1,10 @@
+<button ng-click="colorToGreen()">Click Me</button>
+<div ng-style="{'background-color': colorVar}"></div>
+<div ng-style="{'background-color': colorVar}"></div>
+<div ng-style="{'background-color': colorVar}"></div>
+
+$scope.colorVar = "white"
+
+$scope.colorToGreen = function(){
+  $scope.colorVar = "green"
+}

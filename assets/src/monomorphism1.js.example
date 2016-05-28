@@ -1,0 +1,15 @@
+while (op) {
+  var getter = getterFor(op.fieldName);
+
+  var oldValue = op.value;
+  var newValue = getter(op.context);
+
+  if (oldValue != newValue) {
+    op.value = newValue;
+
+    var fn = reconcilationFunctionFor(op);
+    fn(oldValue, newValue)
+  }
+
+  op = op.next
+}

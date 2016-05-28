@@ -1,0 +1,6 @@
+Zone.setInterval()
+Zone.alert()
+Zone.prompt()
+Zone.requestAnimationFrame()
+Zone.addEventListener()
+Zone.removeEventListener()

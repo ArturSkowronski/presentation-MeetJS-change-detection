@@ -1,0 +1,32 @@
+<ReactButton />
+
+export default class ReactButton extends Component {
+  constructor() {
+    super();
+    this.state = {
+      color: "white"
+    };
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    this.setState({
+      color: "green"
+    });
+  }
+
+  render() {
+    const style = {
+      background: this.state.color,
+    };
+
+  return (
+    <div>
+      <div style={style}></div>
+      <div style={style}></div>
+      <div style={style}></div>
+      <button style={styles} onClick={this.handleClick}>Click Me</button>
+    </div>
+  );
+  }
+}

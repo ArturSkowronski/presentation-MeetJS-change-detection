@@ -1,0 +1,9 @@
+var thor = {weapon: "hammer"}
+var newThor = thor;
+newThor.weapon = "shield"
+x === y // true
+
+var ImmutableHero = Immutable.Record({ weapon: null });
+var thor = new ImmutableHero({ weapon: 'hammer'});
+var newThor = hero.set('weapon', 'shield');
+x === y //false
